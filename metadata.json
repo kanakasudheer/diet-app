@@ -1,0 +1,7 @@
+
+{
+  "name": "AI Diet Guide",
+  "description": "An application that provides personalized diet suggestions based on user wellness goals, powered by AI. Users can create an account, log in, and set goals like muscle building, skin health, healthy aging, or managing health conditions to receive customized dietary advice.",
+  "requestFramePermissions": [],
+  "prompt": ""
+}

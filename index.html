@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AI Diet Guide</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      /* Custom scrollbar for a cleaner look */
+      ::-webkit-scrollbar {
+        width: 8px;
+      }
+      ::-webkit-scrollbar-track {
+        background: #f1f1f1;
+        border-radius: 10px;
+      }
+      ::-webkit-scrollbar-thumb {
+        background: #888;
+        border-radius: 10px;
+      }
+      ::-webkit-scrollbar-thumb:hover {
+        background: #555;
+      }
+      body {
+        font-family: 'Inter', sans-serif; /* A clean sans-serif font */
+        overflow-x: hidden; /* Prevent horizontal scroll during animations */
+      }
+      .animate-fadeIn {
+        animation: fadeIn 0.5s ease-in-out forwards;
+      }
+      @keyframes fadeIn {
+        0% { opacity: 0; transform: translateY(10px); }
+        100% { opacity: 1; transform: translateY(0); }
+      }
+
+      /* New Animations */
+      .animate-popIn {
+        animation: popIn 0.5s cubic-bezier(0.68, -0.55, 0.27, 1.55) forwards;
+      }
+      @keyframes popIn {
+        0% { opacity: 0; transform: scale(0.95); }
+        100% { opacity: 1; transform: scale(1); }
+      }
+
+      .animate-slideInUpStagger {
+        animation: slideInUpStagger 0.4s ease-out forwards;
+      }
+      @keyframes slideInUpStagger {
+        0% { opacity: 0; transform: translateY(20px); }
+        100% { opacity: 1; transform: translateY(0); }
+      }
+      
+      .animate-slideDownEnter {
+        animation: slideDownEnter 0.3s ease-out forwards;
+      }
+      @keyframes slideDownEnter {
+        0% { opacity: 0; transform: translateY(-10px); }
+        100% { opacity: 1; transform: translateY(0); }
+      }
+
+      .animate-slideInFromRight {
+        animation: slideInFromRight 0.5s ease-out forwards;
+      }
+      @keyframes slideInFromRight {
+        0% { opacity: 0; transform: translateX(30px); }
+        100% { opacity: 1; transform: translateX(0); }
+      }
+
+
+      /* Animation delay utilities - can be applied with style={{animationDelay: '...'}} or Tailwind arbitrary values if Tailwind config was accessible */
+      /* These specific classes are less flexible than inline styles for delay but can be used if preferred */
+      .delay-100 { animation-delay: 0.1s; }
+      .delay-200 { animation-delay: 0.2s; }
+      .delay-300 { animation-delay: 0.3s; }
+      .delay-400 { animation-delay: 0.4s; }
+      .delay-500 { animation-delay: 0.5s; }
+      .delay-600 { animation-delay: 0.6s; }
+      .delay-700 { animation-delay: 0.7s; }
+
+    </style>
+     <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Pacifico&family=Roboto+Mono:wght@400;700&display=swap" rel="stylesheet">
+  <script type="importmap">
+{
+  "imports": {
+    "react-dom/": "https://esm.sh/react-dom@^19.1.0/",
+    "react/": "https://esm.sh/react@^19.1.0/",
+    "react": "https://esm.sh/react@^19.1.0",
+    "@google/genai": "https://esm.sh/@google/genai@^1.1.0",
+    "framer-motion": "https://esm.sh/framer-motion@^11.3.8",
+    "lucide-react": "https://esm.sh/lucide-react@^0.417.0"
+  }
+}
+</script>
+</head>
+  <body class="bg-gradient-to-br from-green-50 to-emerald-100 min-h-screen">
+    <div id="root"></div>
+    <script type="module" src="/index.tsx"></script>
+  </body>
+</html><link rel="stylesheet" href="index.css">
+<script src="index.tsx" type="module"></script>
